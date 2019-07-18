@@ -3,10 +3,10 @@ const db = require('../data/dbConfig');
 
 
 module.exports = {
-    find
+    getRecepies,
 }
 
 
-function find(){
-    return db('recipe');
+function getRecepies(){
+    return db('receipe');
 }

@@ -1,14 +1,37 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('recipe').del()
+  return knex('receipe', 'ingredient', 'receipe_ingredients').del()
     .then(function () {
       // Inserts seed entries
-      return knex('recipe').insert([
-        {recipe_name: 'Cheesecake'},
-        {recipe_name: 'Hamburger'},
-        {recipe_name: 'Martini'},
-        {recipe_name: 'Spaghetti'}
+      return knex('receipe').insert([
+        {receipe_name: 'Cheesecake'},
+        {receipe_name: 'Hamburger'},
+        {receipe_name: 'Martini'},
+        {receipe_name: 'Spaghetti'}
       ]);
-    });
+    })
+    .then(function () {
+      // Inserts seed entries
+      return knex('ingredient').insert([
+        {ingredient_name: 'sugar'},
+        {ingredient_name: 'butter'},
+        {ingredient_name: 'olive'},
+        {ingredient_name: 'ground chuck'},
+        {ingredient_name: 'tomatoe'},
+        {ingredient_name: 'salt'},
+      ]);
+    })
+    .then(function () {
+      // Inserts seed entries
+      return knex('receipe_ingredients').insert([
+        {ingredient_id: 1, receipe_id:1, amount: '1 cup'},
+        {ingredient_id: 2, receipe_id:1, amount: '1 cup'},
+        {ingredient_id: 6, receipe_id:1, amount: '1 tsp'},
+
+        {ingredient_id: 4, receipe_id:2, amount: '1 lb'},
+        {ingredient_id: 5, receipe_id:2, amount: '1 oz'},
+        {ingredient_id: 6, receipe_id:2, amount: '1 tsp'},
+      ]);
+    })
 };
