@@ -25,3 +25,9 @@
 -After successful connection
 - create db file, code all db connection to db file, import dbfile to router
 -test connection
+- create model file
+- import db connection to model file, then import model file to router and use helper functions as db getters
+- test helper funcctions in router
+
+# next steps
+- add json to router to parse json on post

@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const db = require('../data/dbConfig')
+const Recipe = require('./recipe-model');
 
 
 router.get('/', (req, res) =>{
-    db('recipe')
+    Recipe.find()
         .then(recipes =>{
             res.status(200).json(recipes)
         })
