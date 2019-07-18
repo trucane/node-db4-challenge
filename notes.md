@@ -6,10 +6,15 @@
 - seeds.... npx knex seed:make 001 recipe.. //the number gives a seed reference
 - fill migrate fields
 - migrate and seed tables migrate:up, seed:run
+- check sqliteStudio for database and seeded data
 
 
 # next steps
 - this is soing extra steps but i need to repetition to get better
 
-- create server in index.js
+- create server in index.js file
 - run server npm run server
+- create server.js file
+- move index server code to serve.js file, export module, require server.js in index.js
+- create recipe folder
+- create router file
