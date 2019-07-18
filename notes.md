@@ -18,3 +18,10 @@
 - move index server code to serve.js file, export module, require server.js in index.js
 - create recipe folder
 - create router file
+
+# next steps
+- create db connection in router file
+- check connection
+-After successful connection
+- create db file, code all db connection to db file, import dbfile to router
+-test connection

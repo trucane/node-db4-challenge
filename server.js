@@ -8,6 +8,6 @@ server.get('/', (req, res) =>{
 });
 
 
-server.use('/api/recepies', RecipeRouter)
+server.use('/api/recipes', RecipeRouter)
 
 module.exports = server;
