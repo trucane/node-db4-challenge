@@ -4,9 +4,9 @@
     "description": "Challenge Prject for Node DB 4 Module",
     "main": "index.js",
     "scripts": {
-        "server":"nodemon index.js"
+        "server": "nodemon index.js"
     },
-    "keywords": {},
+    "keywords": [],
     "author": "Lambda School",
     "dependencies": {
         "express": "^4.17.1",
@@ -15,6 +15,6 @@
         "sqlite3": "^4.0.9"
     },
     "devDependencies": {
-        "nodemon": "^1.19.1",
+        "nodemon": "^1.19.1"
     }
 }
