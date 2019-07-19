@@ -1,9 +1,9 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('receipe', 'ingredient', 'receipe_ingredients').del()
-    .then(function () {
-      // Inserts seed entries
+  return knex('receipe', 'ingredient', 'receipe_ingredients').truncate()
+    .then( () => {
+      // Inserts receipe entries
       return knex('receipe').insert([
         {receipe_name: 'Cheesecake'},
         {receipe_name: 'Hamburger'},
@@ -11,8 +11,8 @@ exports.seed = function(knex) {
         {receipe_name: 'Spaghetti'}
       ]);
     })
-    .then(function () {
-      // Inserts seed entries
+    .then( () => {
+      // Inserts ingredient entries
       return knex('ingredient').insert([
         {ingredient_name: 'sugar'},
         {ingredient_name: 'butter'},
@@ -22,8 +22,8 @@ exports.seed = function(knex) {
         {ingredient_name: 'salt'},
       ]);
     })
-    .then(function () {
-      // Inserts seed entries
+    .then( () => {
+      // Inserts receipe_ingredients entries
       return knex('receipe_ingredients').insert([
         {ingredient_id: 1, receipe_id:1, amount: '1 cup'},
         {ingredient_id: 2, receipe_id:1, amount: '1 cup'},

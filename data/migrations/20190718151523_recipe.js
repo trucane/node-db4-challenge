@@ -30,14 +30,14 @@ exports.up = function(knex) {
             .references('id')
             .inTable('ingredient')
             .onUpdate('CASCADE')
-            .onDelete('RESTRICT');
+            .onDelete('CASCADE');
         tbl
             .string('receipe_id', 128)
             .notNullable()
             .references('id')
             .inTable('receipe')
             .onUpdate('CASCADE')
-            .onDelete('RESTRICT');
+            .onDelete('CASCADE');
 
         tbl.string('amount', 128);
     })

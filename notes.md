@@ -1,5 +1,5 @@
 # first steps
-- create package.json file
+- create package.json file or npm init y
 - create knex file....cinnection, migration, seeds
 - download knex, nodemon, express, helmet, sqlite3 and dependencies
 - migrate table... npx knex migrate:make recipe
